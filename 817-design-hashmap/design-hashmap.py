@@ -18,10 +18,12 @@ class MyHashMap:
         return -1
 
     def remove(self, key: int) -> None:
+        rem = -1
         for i in range(len(self.arr)):
             if self.arr[i][0] == key:
-                self.arr.pop(i)
-                break
+                rem = i
+        if rem != -1:
+            self.arr.pop(rem)
 
 
 
