@@ -3,7 +3,7 @@ class Solution:
         c = 1
         mx = 0
         for i in range(1,len(s)):
-            if s[i-1] == s[i]:
+            if s[i] == s[i-1]:
                 c += 1
             else:
                 mx = max(c,mx)
