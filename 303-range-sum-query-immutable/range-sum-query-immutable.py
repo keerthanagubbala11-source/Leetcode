@@ -4,12 +4,8 @@ class NumArray:
         self.nums = nums
 
     def sumRange(self, left: int, right: int) -> int:
-        prefix = list(itertools.accumulate(self.nums))
-        s = 0
-        if left != 0:
-            s = prefix[right] - prefix[left-1]
-        else:
-            s = prefix[right]
+        prefix = list(itertools.accumulate(self.nums,initial = 0))
+        s = prefix[right+1] - prefix[left]
         return s
 
 
