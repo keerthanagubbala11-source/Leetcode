@@ -7,7 +7,7 @@ class Solution:
             elif i == 'D':
                 st.append(st[-1]*2)
             elif i == 'C':
-                st.remove(st[-1])
+                st.pop()
             else:
                 st.append(int(i))
         return sum(st)
